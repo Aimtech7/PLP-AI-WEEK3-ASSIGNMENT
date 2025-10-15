@@ -1,7 +1,6 @@
-# 🧠 AI Tools & Frameworks Assignment
+# 🧠 AI Tools & Frameworks Week3 Assignment
 
-This project demonstrates both **theoretical and practical mastery** of key AI frameworks — TensorFlow, PyTorch, Scikit-learn, and spaCy — through real-world tasks.  
-It combines **classical ML**, **deep learning**, **NLP**, **ethical reflection**, and **deployment** with advanced additions like **XAI** and **cloud-hosted dashboards**.
+
 
 ---
 
@@ -16,11 +15,11 @@ To evaluate understanding and proficiency in:
 ### 👥 Team Members
 | Name | Role | Task |
 |------|------|------|
-| Member 1 | Theory & Docs | Theoretical Q&A |
-| Member 2 | Classical ML | Iris Decision Tree |
-| Member 3 | Deep Learning | MNIST CNN |
-| Member 4 | NLP | spaCy NER & Sentiment |
-| Member 5 | XAI & Deployment | Explainability + Streamlit Cloud Hosting |
+| Austine/Trezah | Theory & Docs | Theoretical Q&A |
+| Trezah | Classical ML | Iris Decision Tree |
+| Trezah | Deep Learning | MNIST CNN |
+| Austine | NLP | spaCy NER & Sentiment |
+| Austine | XAI & Deployment | Explainability + Streamlit Cloud Hosting |
 
 ---
 
