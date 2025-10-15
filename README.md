@@ -2,6 +2,7 @@
 
 
 stremlit project: https://github.com/Aimtech7/plp-week3-Ml
+Streamlit app: https://plp-week3-ml-dduhzspsrwtxhumcn9tur6.streamlit.app/
 ---
 
 ## 📘 Project Overview
