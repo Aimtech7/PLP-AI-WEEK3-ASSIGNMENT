@@ -88,12 +88,6 @@ Install explainability libraries:
 pip install lime shap
 ```
 
-## Deployment to Streamlit Cloud
-
-1. Push your code to GitHub (exclude model files if too large)
-2. Add `setup_models.py` to your deployment
-3. In Streamlit Cloud settings, set the Python version to 3.9+
-4. Models will be trained on first run or add them to your repo if small enough
 
 ### Option 1: Include Pre-trained Models
 - If models are < 100MB, commit them to the repo
