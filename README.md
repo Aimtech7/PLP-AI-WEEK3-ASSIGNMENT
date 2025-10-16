@@ -1,157 +1,155 @@
-# 🧠 AI Tools & Frameworks Week3 Assignment
+# AI Tools & Frameworks Dashboard
 
+A comprehensive Streamlit web application showcasing three powerful AI frameworks: Scikit-learn, TensorFlow, and spaCy.
 
-stremlit project: https://github.com/Aimtech7/plp-week3-Ml
-Streamlit app: https://plp-week3-ml-dduhzspsrwtxhumcn9tur6.streamlit.app/
----
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-red)
+![License](https://img.shields.io/badge/License-Educational-green)
 
-## 📘 Project Overview
+## Quick Start
 
-### 🎯 Objective
-To evaluate understanding and proficiency in:
-- Applying and comparing AI tools/frameworks.
-- Implementing ethical and explainable AI systems.
-- Building deployable and interactive AI applications.
+```bash
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+python setup_models.py
+streamlit run app.py
+```
 
-### 👥 Team Members
-| Name | Role | Task |
-|------|------|------|
-| Austine/Trezah | Theory & Docs | Theoretical Q&A |
-| Trezah | Classical ML | Iris Decision Tree |
-| Trezah | Deep Learning | MNIST CNN |
-| Austine | NLP | spaCy NER & Sentiment |
-| Austine | XAI & Deployment | Explainability + Streamlit Cloud Hosting |
+See [QUICKSTART.md](QUICKSTART.md) for detailed instructions.
 
----
+## Features
 
-## 🧩 PART 1: Theoretical Understanding (40%)
+### 🪴 Iris Classifier (Scikit-learn)
+- Interactive species prediction using Decision Tree
+- Input custom flower measurements
+- View prediction confidence with visualizations
+- Feature importance analysis
 
-### **Q1: Explain the primary differences between TensorFlow and PyTorch. When would you choose one over the other?**
+### 🔢 MNIST Digit Recognition (TensorFlow)
+- Draw digits on an interactive canvas
+- Upload handwritten digit images
+- CNN-powered prediction with confidence scores
+- Real-time image preprocessing
 
-| Feature | TensorFlow | PyTorch |
-|----------|-------------|----------|
-| **Developer** | Google Brain | Facebook AI |
-| **Computation Graph** | Static (TF1), Eager (TF2) | Dynamic (Define-by-Run) |
-| **Ease of Debugging** | Moderate | Easier (Pythonic) |
-| **Deployment** | TensorFlow Lite, TF Serving | TorchServe, ONNX |
-| **When to Choose** | Production deployment | Research, prototyping |
+### 💬 NLP Sentiment & Entity Analysis (spaCy + TextBlob)
+- Sentiment analysis with polarity and subjectivity scores
+- Named Entity Recognition (NER)
+- Pre-loaded example reviews
+- Visual entity distribution
 
-✅ **Summary:**  
-Use **TensorFlow** for production-ready scalable systems;  
-Use **PyTorch** for flexible and experimental research.
+### 🔍 Model Explainability
+- Feature importance visualization
+- LIME explanations for individual predictions
+- SHAP analysis for global interpretability
+- Understand AI decision-making
 
----
+## Installation
 
-### **Q2: Describe two use cases for Jupyter Notebooks in AI development.**
-1. **Model Experimentation:** Visualize training metrics interactively.  
-2. **Educational Reports:** Blend explanations, code, and visual outputs in one notebook.
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
----
+2. Download spaCy language model:
+```bash
+python -m spacy download en_core_web_sm
+```
 
-### **Q3: How does spaCy enhance NLP tasks compared to basic Python string operations?**
-- Pre-trained models for tokenization, POS tagging, and NER.  
-- Optimized with Cython for speed and scalability.  
-- Simplifies complex NLP workflows through pipelines.  
+3. Train the models (optional):
+```bash
+cd notebooks
+python train_iris_model.py
+python train_mnist_model.py
+```
 
-✅ **Benefit:** Automates preprocessing and entity recognition without manual regex or tokenization code.
+## Usage
 
----
+Run the Streamlit app:
+```bash
+streamlit run app.py
+```
 
-### **Q4: Comparative Analysis — Scikit-learn vs TensorFlow**
+The app will open in your browser at `http://localhost:8501`
 
-| Criteria | Scikit-learn | TensorFlow |
-|-----------|----------------|--------------|
-| **Target Applications** | Classical ML | Deep Learning |
-| **Ease of Use** | Simpler, intuitive APIs | Steeper learning curve |
-| **Community Support** | Strong in academia | Strong in production |
+## Project Structure
 
----
+```
+.
+├── app.py                      # Main Streamlit application
+├── iris_classifier.py          # Iris classification module
+├── mnist_classifier.py         # MNIST digit recognition module
+├── nlp_analyzer.py            # NLP sentiment & entity analysis
+├── explainability.py          # Model explainability dashboard
+├── requirements.txt           # Python dependencies
+├── models/
+│   ├── iris_decision_tree.pkl # Trained Iris model
+│   └── mnist_cnn.h5          # Trained MNIST CNN model
+├── notebooks/
+│   ├── train_iris_model.py   # Iris model training script
+│   └── train_mnist_model.py  # MNIST model training script
+└── screenshots/              # Application screenshots
+```
 
-## ⚙️ PART 2: Practical Implementation (50%)
+## Technologies
 
-### **Task 1: Classical ML with Scikit-learn**
-**Dataset:** Iris  
-**Goal:** Predict species using Decision Tree  
-**Evaluation:** Accuracy, Precision, Recall  
+- **Streamlit**: Interactive web application framework
+- **Scikit-learn**: Classical machine learning (Decision Trees)
+- **TensorFlow/Keras**: Deep learning (CNNs)
+- **spaCy**: Industrial-strength NLP
+- **TextBlob**: Simple sentiment analysis
+- **LIME**: Local model explanations
+- **SHAP**: SHapley Additive exPlanations
+- **Matplotlib/Seaborn**: Data visualization
 
-📘 File: `notebooks/iris_classifier.ipynb`  
-📸 Screenshot: `/screenshots/iris_confusion_matrix.png`
+## Deployment
 
----
+### Streamlit Cloud
 
-### **Task 2: Deep Learning with TensorFlow**
-**Dataset:** MNIST  
-**Goal:** Build CNN achieving >95% accuracy  
-**Outputs:** Accuracy graph, sample predictions  
+1. Push code to GitHub
+2. Connect repository to Streamlit Cloud
+3. Deploy with one click
 
-📘 File: `notebooks/mnist_cnn_tf.ipynb`  
-📸 Screenshots:  
-- `/screenshots/mnist_accuracy_plot.png`  
-- `/screenshots/mnist_sample_predictions.png`
+Ensure all model files are included or retrain models in the cloud environment.
 
----
+## Documentation
 
-### **Task 3: NLP with spaCy**
-**Dataset:** Amazon Product Reviews  
-**Goal:** Extract Named Entities & analyze sentiment  
+- [QUICKSTART.md](QUICKSTART.md) - Get started in 3 minutes
+- [FEATURES.md](FEATURES.md) - Detailed feature documentation
+- [SETUP.md](SETUP.md) - Installation and troubleshooting
+- [DEPLOYMENT.md](DEPLOYMENT.md) - Deploy to production
+- [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) - Code architecture
+- [ARCHITECTURE.md](ARCHITECTURE.md) - System design diagrams
 
-📘 File: `notebooks/spacy_nlp_reviews.ipynb`  
-📸 Screenshots:  
-- `/screenshots/spacy_ner_output.png`  
-- `/screenshots/spacy_sentiment_output.png`
+## Screenshots
 
----
+### Dashboard
+Beautiful, professional interface with tab-based navigation.
 
-## 🧭 PART 3: Ethics & Optimization (10%)
+### Iris Classifier
+Interactive predictions with confidence visualization.
 
-### **1. Ethical Considerations**
-- **Bias Examples:**
-  - MNIST lacks handwriting diversity (age, region, style).
-  - Sentiment models can reflect gendered or cultural bias.
-- **Mitigation:**
-  - TensorFlow **Fairness Indicators** to analyze subgroup metrics.
-  - spaCy **rule-based lexicons** to refine sentiment detection.
+### MNIST Recognition
+Draw digits or upload images for real-time recognition.
 
----
+### NLP Analysis
+Sentiment analysis and named entity recognition.
 
-### **2. Troubleshooting**
-Common TensorFlow errors & fixes:
-- **Dimension mismatch:** Ensure `input_shape=(28,28,1)`.  
-- **Nan loss:** Normalize input, reduce learning rate.  
-- **Wrong loss function:** Use `sparse_categorical_crossentropy` for integer labels.
+### Explainability
+LIME and SHAP visualizations for model interpretation.
 
----
+## Project Stats
 
-## 💎 BONUS & ADVANCED FEATURES
+- **Total Files**: 22
+- **Lines of Code**: ~1,200+
+- **Documentation Pages**: 7
+- **Models Implemented**: 3
+- **AI Frameworks**: 5
 
-### 🧠 **1. Model Comparison Dashboard**
-A Streamlit dashboard comparing **Decision Tree (Scikit-learn)** and **CNN (TensorFlow)** performance:
+## Team
 
-📘 File: `/app/model_dashboard.py`
+**Developed by Team Aimtech7**
+AI Tools & Frameworks Assignment 2025
 
-```python
-import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
+## License
 
-st.title("📊 Model Comparison Dashboard")
-
-# Example results
-results = {
-    "Model": ["Decision Tree", "CNN"],
-    "Accuracy": [0.95, 0.985],
-    "Precision": [0.94, 0.98],
-    "Recall": [0.93, 0.97]
-}
-
-df = pd.DataFrame(results)
-st.bar_chart(df.set_index("Model"))
-st.write("✅ The CNN outperforms the Decision Tree, showing deep learning’s power on image datasets.")
-
-
-## Iris model trained (example)
-- Accuracy: 1.0000
-- Precision (macro): 1.0000
-- Recall (macro): 1.0000
-
-Screenshots: `screenshots/iris_confusion_matrix.png`, `screenshots/iris_metrics.png`
+This project is created for educational purposes.

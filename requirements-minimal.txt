@@ -1,0 +1,15 @@
+streamlit
+scikit-learn
+tensorflow
+numpy
+pandas
+matplotlib
+seaborn
+spacy
+textblob
+lime
+shap
+streamlit-drawable-canvas
+Pillow
+plotly
+opencv-python-headless
